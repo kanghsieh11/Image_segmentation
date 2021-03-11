@@ -7,10 +7,10 @@ from seg import ImageSeg
 
 # setting arguments
 parse = argparse.ArgumentParser()
-parse.add_argument("-i", "--input", help="image needs to separate.", default="./image/tower.jpg")
+parse.add_argument("-i", "--input", help="image needs to separate.", default="./image/cat.jpg")
 parse.add_argument("-o", "--output", help="result image's name.", default="./result")
-parse.add_argument("-s", "--sigma", help="the factor of GaussianFilter.", default=0.8)
-parse.add_argument("-k", help="the factor to control the size of segment region.", default=800)
+parse.add_argument("-s", "--sigma", help="the factor of GaussianFilter.", type=float, default=0.8)
+parse.add_argument("-k", help="the factor to control the size of segment region.", type=int, default=500)
 args = parse.parse_args()
 
 # parsing arguments
