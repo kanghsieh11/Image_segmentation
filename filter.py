@@ -30,7 +30,7 @@ class GaussianFilter(object):
         K = K / K.sum()
         return K
 
-    def filter(self, img):
+    def process(self, img):
         """
         Gaussian filter can be divided into two steps:
         first, convolute the image with one-dimensional Gaussian function in the horizontal/vertical
